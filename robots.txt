@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ernest-lin.github.io/ernest-learning-journal//sitemap.xml

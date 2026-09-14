@@ -1,0 +1,35 @@
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:                 flow_w   R-squared:                        0.0367
+Estimator:                   PanelOLS   R-squared (Between):             -20.755
+No. Observations:               81262   R-squared (Within):               0.0290
+Date:                Tue, May 12 2026   R-squared (Overall):             -0.6237
+Time:                        05:27:41   Log-likelihood                 6.823e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      761.50
+Entities:                        1269   P-value                           0.0000
+Avg Obs:                       64.036   Distribution:                 F(4,79920)
+Min Obs:                       2.0000                                           
+Max Obs:                       70.000   F-statistic (robust):             56.596
+                                        P-value                           0.0000
+Time periods:                      70   Distribution:                 F(4,79920)
+Avg Obs:                       1160.9                                           
+Min Obs:                       1030.0                                           
+Max Obs:                       1217.0                                           
+                                                                                
+                               Parameter Estimates                               
+=================================================================================
+               Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+---------------------------------------------------------------------------------
+const             0.1127     0.0094     12.009     0.0000      0.0943      0.1311
+AI_dummy_post     0.0076     0.0021     3.6305     0.0003      0.0035      0.0118
+log_mtna_lag     -0.0317     0.0025    -12.582     0.0000     -0.0366     -0.0268
+mret_lag          0.1363     0.0213     6.3885     0.0000      0.0945      0.1781
+flow_lag         -0.0922     0.0132    -6.9832     0.0000     -0.1181     -0.0664
+=================================================================================
+
+F-test for Poolability: 3.7952
+P-value: 0.0000
+Distribution: F(1337,79920)
+
+Included effects: Entity, Time
