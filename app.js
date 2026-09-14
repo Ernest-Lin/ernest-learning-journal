@@ -189,9 +189,6 @@
       });
       container.append(script);
     };
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => { if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); load(); } }, { rootMargin: '200px' });
-      observer.observe(container);
-    } else load();
+    load();
   }
 })();
