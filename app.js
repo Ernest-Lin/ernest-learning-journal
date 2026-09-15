@@ -173,22 +173,4 @@
   }
   initLibrary();
 
-  for (const container of document.querySelectorAll('[data-comments]')) {
-    const { repo, repoId, category, categoryId } = container.dataset;
-    if (!(repo && repoId && category && categoryId)) continue;
-    const load = () => {
-      if (container.dataset.loaded) return;
-      container.dataset.loaded = 'true';
-      const script = document.createElement('script');
-      script.src = 'https://giscus.app/client.js'; script.async = true; script.crossOrigin = 'anonymous';
-      const values = { repo, 'repo-id': repoId, category, 'category-id': categoryId, mapping: 'pathname', strict: '0', 'reactions-enabled': '1', 'emit-metadata': '0', 'input-position': 'top', theme: 'light', lang: 'zh-CN' };
-      for (const [key, value] of Object.entries(values)) script.setAttribute(`data-${key}`, value);
-      script.addEventListener('error', () => {
-        const status = container.querySelector('[data-comment-status]');
-        if (status) { status.querySelector('h3').textContent = '评论暂时无法连接'; status.querySelector('p').textContent = '请稍后刷新页面重试。'; }
-      });
-      container.append(script);
-    };
-    load();
-  }
 })();
